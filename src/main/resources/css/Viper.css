@@ -1,0 +1,32 @@
+.root{
+
+}
+
+.menu-button{
+    -fx-background-color: deepskyblue;
+}
+.menu-item{
+
+    -fx-background-color: linear-gradient(#ff5400,#be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+.text-area {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-area:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+.choice-box {
+    -fx-pref-width: 220;
+}
+
+.choice-box .context-menu {
+    -fx-pref-width: 220; /* Your width for the context menu background shown */
+}
+.combo-box-popup > .list-view {
+    -fx-pref-width: 5;
+}

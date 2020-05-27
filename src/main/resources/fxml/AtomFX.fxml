@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="nuevo1" mnemonicParsing="false" onAction="#onClickNew" text="New" />
+              <MenuItem fx:id="save1" mnemonicParsing="false" onAction="#onClickSave" text="Save" />
+                  <MenuItem fx:id="open1" mnemonicParsing="false" onAction="#onClickOpen" text="Open" />
+                  <MenuItem fx:id="saveas1" mnemonicParsing="false" onAction="#onClickSaveAs" text="Save as" />
+                  <MenuItem fx:id="exit1" mnemonicParsing="false" onAction="#onClickExit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="paste1" mnemonicParsing="false" onAction="#onClickPaste" text="Paste" />
+                  <MenuItem fx:id="cut1" mnemonicParsing="false" onAction="#onClickCut" text="Cut" />
+                  <MenuItem fx:id="copy1" mnemonicParsing="false" onAction="#OnClickCopy" text="Copy" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TextArea fx:id="texteditor" prefHeight="260.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem fx:id="paste11" mnemonicParsing="false" onAction="#onClickPaste" text="Paste" />
+                        <MenuItem fx:id="cut11" mnemonicParsing="false" onAction="#onClickCut" text="Cut" />
+                        <MenuItem fx:id="copy11" mnemonicParsing="false" onAction="#OnClickCopy" text="Copy" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="nuevo11" mnemonicParsing="false" onAction="#onClickNew" text="New" />
+                        <MenuItem fx:id="save11" mnemonicParsing="false" onAction="#onClickSave" text="Save" />
+                        <MenuItem fx:id="open11" mnemonicParsing="false" onAction="#onClickOpen" text="Open" />
+                        <MenuItem fx:id="saveas11" mnemonicParsing="false" onAction="#onClickSaveAs" text="Save as" />
+                        <MenuItem fx:id="exit11" mnemonicParsing="false" onAction="#onClickExit" text="Close" />
+                     </items>
+                  </Menu>
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TextArea>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="48.0" prefWidth="196.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Source Language:" VBox.vgrow="ALWAYS" />
+                  <ChoiceBox fx:id="fromlng" prefWidth="150.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="To Language:" />
+                  <ChoiceBox fx:id="tolng" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="80.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="translate" mnemonicParsing="false" onAction="#onClickTranslate" text="Traducir" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="126.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="estilo1" mnemonicParsing="false" onAction="#onClickTema1" text="Estilo 1" />
+                  <Button fx:id="estilo2" mnemonicParsing="false" onAction="#onClickTema2" text="Estilo 2" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="126.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="estilo3" mnemonicParsing="false" onAction="#onClickTema3" text="Estilo 3" />
+                  <Button fx:id="estilo4" mnemonicParsing="false" onAction="#onClickTema4" text="Estilo 4" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
